@@ -1,6 +1,6 @@
 import React from "react";
 import Employee from "./components/Employee";
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Wrapper from "./components/Wrapper";
 function App() {
     return (

@@ -1,0 +1,28 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.headerDiv{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding:20px;
+    background-color: cadetblue;
+    text-align: center;
+    width: 100%;
+
+}
+.btnDiv{
+    margin: 10px auto 0 auto;
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.btn{
+    background-color: cornsilk;
+    margin-top: 10px;
+
+}
