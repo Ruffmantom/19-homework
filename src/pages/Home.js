@@ -1,62 +1,57 @@
 import React, { Component } from "react";
-import Employee from "../components/Employee";
+import Employee from "../components/Employee/Employee";
 import Header from "../components/Header/Header";
 import Wrapper from "../components/Wrapper";
 
 // need button click functions
 const employees = [
     {
-        name: "Tom",
+        name: "Tom Ruff",
         language: "Javascript"
     },
     {
-        name: "John",
+        name: "John Mondy",
         language: "HTML"
     },
     {
-        name: "Brent",
+        name: "Brent Carter",
         language: "Javascript"
     },
     {
-        name: "Ashley",
+        name: "Ashley Sworensin",
         language: "Javascript"
     },
     {
-        name: "Emily",
+        name: "Emily Hope",
         language: "HTML"
     },
     {
-        name: "Robert",
+        name: "Robert Bovee",
         language: "CSS"
     },
     {
-        name: "Blaise",
+        name: "Blaise Laurel",
         language: "Javascript"
     },
     {
-        name: "Moze",
+        name: "Moze Grader",
         language: "Javascript"
     },
 ]
+// getting the btns
 const sortBtn = document.getElementsByClassName("sort-btn");
 const filterBtn = document.getElementsByClassName("filter-btn");
 
 class Home extends Component {
 
-    sortEmployees = () => {
-        sortBtn.addEventListener("click", function () {
-            alert("filter worked!");
-        })
+
+
+    sortEmployees = (event) => {
+        alert("sort worked!");
     }
 
-    filterEmployees = () => {
-        filterBtn.addEventListener("click", function () {
-            alert("filter worked!");
-            var javaEmployees = employees.filter(function (Javascript) {
-                return Javascript.language == "Javascript";
-            });
-        })
-
+    filterEmployees = (event) => {
+        alert("filter worked")
     }
 
     render() {

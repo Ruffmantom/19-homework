@@ -1,0 +1,13 @@
+.list-group{
+    display: flex;
+    flex-direction: column;
+}
+.employeeCard{
+    text-align: left;
+    margin: 10px auto;
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    width: 45%;
+    padding: 10px;
+    
+}

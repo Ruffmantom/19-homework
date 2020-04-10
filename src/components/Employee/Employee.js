@@ -1,13 +1,14 @@
 import React from "react";
+import "./style.css";
 
 function Employee(props) {
     return (
         <ul className="list-group">
             {props.employees.map(employee => (
-                <li className="employee">
-                    <p>{employee.name}</p>
-                    <p>{employee.language}</p>
-                </li>
+                <div className="employeeCard">
+                    <p>Name: {employee.name}</p>
+                    <p>Primary Coding language: {employee.language}</p>
+                </div>
             ))}
         </ul>
     )
