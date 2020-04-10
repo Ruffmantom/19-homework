@@ -1,12 +1,15 @@
 import React from "react";
 
-function Employee() {
+function Employee(props) {
     return (
-        <div>
-            <p>
-                hello world!
-            </p>
-        </div>
+        <ul className="list-group">
+            {props.employees.map(employee => (
+                <li className="employee">
+                    <p>{employee.name}</p>
+                    <p>{employee.language}</p>
+                </li>
+            ))}
+        </ul>
     )
 }
 
