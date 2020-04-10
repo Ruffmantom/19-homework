@@ -1,9 +1,15 @@
 import React from "react";
-import Employee from "./components/employee";
-
+import Employee from "./components/Employee";
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
 function App() {
     return (
-        <Employee />
+        <div>
+            <Header />
+            <Wrapper>
+                <Employee />
+            </Wrapper>
+        </div>
     )
 }
 export default App;
