@@ -48,7 +48,7 @@ console.log(employees.sort());
 class Home extends Component {
 
     state = {
-        employeeList: []
+        employeeList: employees
     };
     // render state functions
     defaultState = () => {
