@@ -1,6 +1,9 @@
 import React from "react";
 import "./style.css";
 
+const sort = document.getElementsByClassName("sort-btn");
+const filter = document.getElementsByClassName("filter-btn");
+
 function Employee(props) {
 
     return (

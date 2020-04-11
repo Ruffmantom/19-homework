@@ -3,7 +3,7 @@ import Employee from "../components/Employee/Employee";
 import Header from "../components/Header/Header";
 import Wrapper from "../components/Wrapper";
 
-// need button click functions
+// dont know if this data should be in this file
 const employees = [
     {
         name: "Tom Ruff",
@@ -34,40 +34,66 @@ const employees = [
         language: "Javascript"
     },
     {
-        name: "Moze Grader",
+        name: "Moze Gader",
         language: "Javascript"
     },
 ]
-// getting the btns
-const sortBtn = document.getElementsByClassName("sort-btn");
-const filterBtn = document.getElementsByClassName("filter-btn");
+// this filter method works
+var filteredEmployees = employees.filter(function (employ) {
+    return employ.language == "Javascript";
+});
+console.log(filteredEmployees);
+console.log(employees.sort());
 
 class Home extends Component {
 
     state = {
         employeeList: []
     };
-
+    // render state functions
+    defaultState = () => {
+        this.setState({ employeeList: employees })
+    }
+    // sort employees
     sortEmployees = (event) => {
-        alert("sort worked!");
+        function compare(a, b) {
+            // Use toUpperCase() to ignore character casing
+            const employeeA = a.name.toUpperCase();
+            const employeeB = b.name.toUpperCase();
 
+            let comparison = 0;
+            if (employeeA > employeeB) {
+                comparison = 1;
+            } else if (employeeA < employeeB) {
+                comparison = -1;
+            }
+            return comparison;
+        }
+
+        console.log(employees.sort(compare));
+        var sortedEmployees = employees.sort(compare);
+        this.setState({ employeeList: sortedEmployees });
 
     }
-
+    // filtering the employees to just show javascript coders
     filterEmployees = (event) => {
-        alert("filter worked")
+        var filteredEmployees = employees.filter(function (employ) {
+            return employ.language == "Javascript";
+        });
+        this.setState({ employeeList: filteredEmployees });
     }
 
     render() {
         return (
             <div>
                 <Header
+                    defaultState={this.defaultState}
                     sortEmployees={this.sortEmployees}
                     filterEmployees={this.filterEmployees}
                 />
                 <Wrapper>
                     <Employee
-                        employees={employees}
+                        employees={this.state.employeeList}
                     />
                 </Wrapper>
             </div >
