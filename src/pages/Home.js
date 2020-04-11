@@ -44,10 +44,14 @@ const filterBtn = document.getElementsByClassName("filter-btn");
 
 class Home extends Component {
 
-
+    state = {
+        employeeList: []
+    };
 
     sortEmployees = (event) => {
         alert("sort worked!");
+
+
     }
 
     filterEmployees = (event) => {
